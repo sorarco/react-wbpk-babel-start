@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "babel-node ./node_modules/webpack/bin/webpack",
-    "start": "babel-node ./node_modules/webpack-dev-server/bin/webpack-dev-server --open"
+    "start": "webpack-dev-server --config ./webpack.config.js --port 8235 --open"
   },
   "repository": {
     "type": "git",
@@ -45,7 +45,9 @@
     "webpack-dev-server": "3.1.9"
   },
   "dependencies": {
-    "react": "16.5.2",
-    "react-dom": "16.5.2"
+    "@material-ui/core": "^4.2.1",
+    "@material-ui/icons": "^4.2.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   }
 }
