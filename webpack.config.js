@@ -1,24 +1,24 @@
 // old
-// const path = require('path');
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 // new
-import path from 'path';
+// import path from 'path';
 
-import HtmlWebpackPlugin from 'html-webpack-plugin';
+// import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 module.exports = {
-  entry: path.join(__dirname,'src','index.js'),
+  entry: path.join(__dirname, "src", "index.js"),
   output: {
-    path: path.join(__dirname,'build'),
-    filename: 'index.bundle.js'
+    path: path.join(__dirname, "build"),
+    filename: "index.bundle.js"
   },
-  mode: process.env.NODE_ENV || 'development',
+  mode: process.env.NODE_ENV || "development",
   resolve: {
-    modules: [path.resolve(__dirname, 'src'), 'node_modules']
+    modules: [path.resolve(__dirname, "src"), "node_modules"]
   },
   devServer: {
-    contentBase: path.join(__dirname,'src')
+    contentBase: path.join(__dirname, "src")
   },
   module: {
     rules: [
@@ -28,7 +28,7 @@ module.exports = {
         test: /\.(js|jsx)$/,
         // we do not want anything from node_modules to be compiled
         exclude: /node_modules/,
-        use: ['babel-loader']
+        use: ["babel-loader"]
       },
       {
         test: /\.(css|scss)$/,
@@ -39,14 +39,14 @@ module.exports = {
         ]
       },
       {
-        test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
-        loaders: ['file-loader']
+        test: /\.(png|svg|jpg|gif|eot|ttf|woff|woff2)$/,
+        loaders: ["file-loader"]
       }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname,'src','index.html')
+      template: path.join(__dirname, "src", "index.html")
     })
   ]
 };
