@@ -15,7 +15,8 @@ module.exports = {
   },
   mode: process.env.NODE_ENV || "development",
   resolve: {
-    modules: [path.resolve(__dirname, "src"), "node_modules"]
+    modules: [path.resolve(__dirname, "src"), "node_modules"],
+    extensions: [".js", ".jsx"]
   },
   devServer: {
     contentBase: path.join(__dirname, "src")
@@ -39,7 +40,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
+        test: /\.(png|svg|jpg|gif|eot|ttf|woff|woff2)$/,
         loaders: ["file-loader"]
       }
     ]
