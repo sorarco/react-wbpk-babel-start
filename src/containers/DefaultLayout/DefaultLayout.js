@@ -29,9 +29,9 @@ import {
   AppSidebarToggler
 } from "@coreui/react";
 // sidebar nav config
-import navigation from "../../_nav.js";
+import navigation from "_nav.js";
 // routes config
-import routes from "../../routes.js";
+import routes from "routes.js";
 
 import logo from "../../assets/img/brand/logo.svg";
 import sygnet from "../../assets/img/brand/sygnet.svg";
