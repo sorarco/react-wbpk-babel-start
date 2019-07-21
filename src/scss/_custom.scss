@@ -1,0 +1,22 @@
+.login-container {
+  background-color: $red-cup-color !important;
+}
+
+// button
+.btn-primary-cup {
+  @include button-variant($red-cup-color, darken($red-cup-color, 7.5%));
+}
+
+.btn-link-gray-cup {
+  color: $gray-cup-color;
+}
+
+// images
+.logo {
+  background-image: url(assets/img/closeup-red.png);
+  height: 70px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 20px;
+  width: 100%;
+}
