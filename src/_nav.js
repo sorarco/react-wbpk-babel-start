@@ -21,6 +21,11 @@ export default {
       icon: "cui-icon-loop icons"
     },
     {
+      name: "Login",
+      url: "/view/login",
+      icon: "cui-icon-loop icons"
+    },
+    {
       name: "Download CoreUI",
       url: "https://coreui.io/react/",
       icon: "cui-cloud-download icons",
